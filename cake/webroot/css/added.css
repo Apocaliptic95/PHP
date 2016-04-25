@@ -1,0 +1,193 @@
+html,body {
+	min-height: 100%;
+	height: 100%
+}
+
+body {
+	background-attachment: fixed;
+	background-image: url(../img/languages.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+
+.form-div {
+	display: block;
+	margin-bottom: 3rem;
+}
+
+.slowo-name-test {
+	font-size:2rem;
+}
+
+.test-btn {
+	width: 20%;
+	margin-right: 1rem;
+}
+
+.btn {
+	margin-bottom: 1rem;
+}
+
+.p-zestaw {
+	font-weight:bold;
+}
+
+.textarea-zestaw {
+	margin: 1rem;
+}
+
+.container-fluid {
+	background-color:rgba(255,255,255,0.90);
+	min-height: 100%;
+	padding-top: 7rem;
+}
+
+.add-button {
+	margin-bottom:0.5rem;
+}
+
+.add-button a button {
+	width:100%;
+}
+
+.table {
+	background-color: white;
+}
+
+.category-table {
+	width: 100%;
+}
+
+.category-table tr {
+
+}
+
+.category-table td {
+	width: 20%;
+}
+
+.paginator {
+	text-align:center;
+}
+
+.category-div {
+	margin: 5%;
+	border: 1px black solid;
+	border-radius: 1rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: white;
+}
+
+.zestaw-div {
+	margin: 5%;
+	border: 3px solid #337ab7;
+	border-radius: 1rem;
+	text-align: center;
+	padding-bottom: 1rem;
+	background-color: white;
+}
+
+.zestaw-name {
+	font-size:2rem;
+	display: block;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-bottom: 3px solid #337ab7;
+	width:100%;
+	background-color:#5bc0de;
+}
+
+.alg-div {
+	text-align:center;
+	border:3px solid #337ab7;
+	display: inline-block;
+	margin: 1rem;
+	width:30%;
+	border-radius: 1rem;
+	vertical-align: top;
+	background-color: white;
+	
+}
+
+.all-div {
+	text-align:center;
+}
+
+.alg-name {
+	font-size:2rem;
+	display: block;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-bottom: 3px solid #337ab7;
+	width:100%;
+	background-color:#5bc0de;
+}
+
+.zestaw-language {
+	font-size:1.5rem;
+	font-weight:bold;
+}
+
+.zestaw-test {
+	font-size:1.5rem;
+	font-weight:bold;
+}
+
+.zestaw-button {
+	width:70%;
+	text-align:center;
+}
+
+.bg-primary th a{
+	color:white;
+}
+
+.bg-primary th a:hover{
+	color:white;
+	text-decoration:none;
+}
+
+.center-cell {
+	text-align:center;
+}
+
+.input {
+	margin: 1rem;
+}
+
+.category-image {
+	width: 15rem;
+	height: 15rem;
+}
+.category-image-admin {
+	width: 5rem;
+	height: 5rem;
+}
+
+.category-name {
+	font-size:2rem;
+}
+
+.category-description {
+	font-size:1.3rem;
+	text-align:justyfy;
+	margin-left:2rem;
+	margin-right:2rem;
+}
+
+.category-button {
+	width:60%;
+}

@@ -1,0 +1,75 @@
+<script>
+var odpowiedzi=new Array();
+var poprawne=new Array();
+<?php $i=0; foreach($set->words as $word): ?>
+odpowiedzi[<?=$i?>] = "<?= md5($word->destination);?>";  
+poprawne[<?=$i?>] = 0;  
+<?php $i++;?>
+<?php endforeach; ?>
+
+    var poprawnie=0;
+    var i=1;
+    function Clicked(){
+          $("submit"+i).prop( "disabled", true );
+          var max=<?=$i?>;
+          var value = $("#word_input"+i).val();
+          var md5 = $.md5(value);
+          if(md5==odpowiedzi[i-1])
+          {
+             poprawnie++;
+            poprawne[i]=1;
+            
+           $("#word"+i).css('background', 'green');
+          }else
+          {
+          $("#word"+i).css('background', 'red');
+          }
+
+          setTimeout(
+            function() 
+            {
+              $("#word"+i).hide();
+              i++;
+              $("#word"+i).show();
+            },2000);
+          
+          if(i==max)
+          {
+          $(".wynik").append("Twój wynik to: <b>"+Math.round(((poprawnie/max)*100))+"%</b>");
+ 
+            $.post( "", { ok: poprawnie, all: poprawne} );
+          }
+      }
+</script>
+
+<div class="container-fluid">
+  <div class="row text-center">
+    <h2><?=$set->name;?></h2>
+    <h4><?=$set->category->name?></h4>
+  </div>
+  <div class="row">
+           <?php $i=1;?>
+           <?php foreach($zestaw->zestawienie as $zestawienie): ?>
+           
+               <div class="panel panel-primary" id="word<?=$i;?>" <?php if($i==1) echo''; else echo'hidden="true"';?>>
+                <div class="panel-heading">
+                  Przetłumacz
+                </div>
+                <div class="panel-body">
+                <?=$zestawienie->tlumaczenie->slowo_one->nazwa_slowo;?> : <input id="word_input<?=$i;?>" /> <input type="submit" value="Sprawdź" id="submit<?=$i;?>" onClick="Clicked()" />
+                </div>
+               </div>
+            <?php $i++;?>
+           <?php endforeach; ?>
+               <div class="panel panel-primary" id="word<?=$i;?>" <?php if($i==1) echo''; else echo'hidden="true"';?>>
+                <div class="panel-heading">
+                  Przetłumacz
+                </div>
+                <div class="panel-body text-center">
+                  <p class="wynik"></p>
+                  <p><small>Spokojnie, wynik nauki nie jest zapisywany</small></p>
+                  <h2><?=$this->Html->link(__('To już koniec, wróć do zestawu'), ['action'=>'view', $set->id]);?></h2>
+                </div>
+               </div>
+   </div>
+</div>  
